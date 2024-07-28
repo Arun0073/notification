@@ -1,0 +1,140 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#2c2143, #000000);
+  margin: 0px 510px 0px 510px;
+}
+.heading {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 32px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.circle-main {
+  margin-top: 49px;
+}
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  width: 382px;
+  height: 382px;
+  position: relative;
+}
+.circle-1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 14px rgba(73, 49, 130, 0.1);
+}
+.circle-1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.circle-2 {
+  width: 324px;
+  height: 324px;
+  border: 2px solid rgba(73, 49, 130, 0.4);
+}
+
+.circle-3 {
+  width: 260px;
+  height: 260px;
+  border: 1px solid #644d9a;
+}
+
+.circle-4 {
+  width: 196px;
+  height: 196px;
+  background-image: radial-gradient(#2f1a61 40%, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  padding-bottom: 80px;
+}
+.notification h1 {
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: 700;
+}
+.notification p {
+  color: rgb(255, 255, 255, 0.6);
+  font-size: 19px;
+  padding-top: 20px;
+  font-weight: 400;
+}
+.notification button {
+  margin-top: 60px;
+  width: 367px;
+  height: 42px;
+  border-radius: 8px;
+  background: #1d103a;
+  border: 2px solid #6434ce;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+.notification button:hover {
+  background: #2f1a61;
+}
+@media (max-width: 480px) {
+  .main {
+    margin: 20px 20px 20px 20px;
+  }
+
+  .circle-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle-4 {
+    width: 75px;
+    height: 75px;
+  }
+
+  .notification h1 {
+    font-size: 18px;
+  }
+
+  .notification p {
+    font-size: 12px;
+  }
+  .notification button {
+    width: 200px;
+    height: 36px;
+  }
+}
