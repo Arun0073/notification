@@ -3,18 +3,18 @@ import React, { useCallback, useEffect } from "react";
 import "./Notification.css";
 import bell from "@/app/assets/Notification.png";
 import Image from "next/image";
-import { toast } from "sonner";
+import { Toaster, toast } from 'sonner'
 
 const Notification = () => {
   const sendNotification = () => {
     if ("Notification" in window && Notification.permission === "granted") {
       new Notification("Hello Developers", {
         body: "This is Notification Message!!",
-        icon: "/src/app/assets/Notification.png",
+        icon: "",
       });
     } else {
       console.log(
-        "Notification permission not granted or Notification API not supported."
+        " Notification API not supported."
       );
     }
     toast.success("Notification Sent!!")
@@ -42,6 +42,7 @@ const Notification = () => {
   }, [requestNotificationPermission]);
   return (
     <div className="main">
+    <Toaster position="top-right" richColors expand={true}/>
       <p className="heading">Hola!</p>
       <div className="circle-main">
         <div className="circle-1">
