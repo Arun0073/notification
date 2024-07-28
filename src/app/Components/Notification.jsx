@@ -3,21 +3,22 @@ import React, { useCallback, useEffect } from "react";
 import "./Notification.css";
 import bell from "@/app/assets/Notification.png";
 import Image from "next/image";
-import { Toaster, toast } from 'sonner'
+import { Toaster, toast } from "sonner";
+import addNotification from "react-push-notification";
+import { Notifications } from "react-push-notification";
 
 const Notification = () => {
   const sendNotification = () => {
-    if ("Notification" in window && Notification.permission === "granted") {
-      new Notification("Hello Developers", {
-        body: "This is Notification Message!!",
-        icon: "",
-      });
-    } else {
-      console.log(
-        " Notification API not supported."
-      );
-    }
-    toast.success("Notification Sent!!")
+    addNotification({
+      title: "Success",
+      subtitle: "You have successfully submitted",
+      message: "Notification Sent",
+      theme: "light",
+      closeButton: "close",
+      backgroundTop: "green",
+      backgroundBottom: "yellowgreen",
+    });
+    toast.success("Notification Sent!!");
   };
 
   const requestNotificationPermission = useCallback(() => {
@@ -42,7 +43,8 @@ const Notification = () => {
   }, [requestNotificationPermission]);
   return (
     <div className="main">
-    <Toaster position="top-right" richColors expand={true}/>
+      <Toaster position="top-right" richColors expand={true} />
+      <Notifications position="top-middle" />
       <p className="heading">Hola!</p>
       <div className="circle-main">
         <div className="circle-1">
