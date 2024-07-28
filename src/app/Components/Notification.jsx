@@ -11,6 +11,10 @@ const Notification = () => {
         body: "This is Notification Message!!",
         icon: "/src/app/assets/Notification.png",
       });
+    } else {
+      console.log(
+        "Notification permission not granted or Notification API not supported."
+      );
     }
   };
 
@@ -20,8 +24,12 @@ const Notification = () => {
         if (permission === "granted") {
           console.log("Notification Permission granted!!");
           sendNotification();
+        } else {
+          console.log("Notification Permission denied.");
         }
       });
+    } else {
+      console.log("Notification API not supported in this browser.");
     }
   }, []);
 
@@ -38,7 +46,13 @@ const Notification = () => {
           <div className="circle-2">
             <div className="circle-3">
               <div className="circle-4">
-                <Image priority={true} src={bell} alt="Bell Image" width={190} height={210} />
+                <Image
+                  priority={true}
+                  src={bell}
+                  alt="Bell Image"
+                  width={190}
+                  height={210}
+                />
               </div>
             </div>
           </div>
