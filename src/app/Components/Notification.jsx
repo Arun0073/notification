@@ -3,6 +3,7 @@ import React, { useCallback, useEffect } from "react";
 import "./Notification.css";
 import bell from "@/app/assets/Notification.png";
 import Image from "next/image";
+import { toast } from "sonner";
 
 const Notification = () => {
   const sendNotification = () => {
@@ -16,6 +17,7 @@ const Notification = () => {
         "Notification permission not granted or Notification API not supported."
       );
     }
+    toast.success("Notification Sent!!")
   };
 
   const requestNotificationPermission = useCallback(() => {
