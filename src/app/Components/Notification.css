@@ -101,6 +101,82 @@
 .notification button:hover {
   background: #2f1a61;
 }
+@media (max-width: 1200px) {
+  .main {
+    margin: 60px 200px 60px 200px;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-3 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-4 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .notification h1 {
+    font-size: 24px;
+  }
+
+  .notification p {
+    font-size: 16px;
+  }
+
+  .notification button {
+    width: 320px;
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    margin: 60px 130px 60px 130px;
+  }
+
+  .circle-1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle-4 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .notification h1 {
+    font-size: 20px;
+  }
+
+  .notification p {
+    font-size: 14px;
+  }
+
+  .notification button {
+    width: 280px;
+    height: 36px;
+  }
+}
 @media (max-width: 480px) {
   .main {
     margin: 60px 20px 20px 20px;
@@ -138,3 +214,4 @@
     height: 36px;
   }
 }
+
